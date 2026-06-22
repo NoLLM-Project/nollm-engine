@@ -1,0 +1,125 @@
+# adjacency_rules.json  
+### Rules for Valid Coordinate Adjacency in NoLLM
+
+This file defines the **legal adjacency patterns** between coordinate nodes.  
+Adjacency determines how movement, routing, and transitions occur in the Engine.
+
+Adjacency rules ensure:
+
+- floors connect only to floors above/below  
+- hallways connect only to hallways on the same floor  
+- stairs connect floors vertically  
+- elevators connect floors vertically  
+- rooms connect to hallways  
+- hotel-level nodes connect to circulation nodes  
+- world-level nodes connect only to other world-level anchors  
+
+These rules prevent invalid or drifting graph structures.
+
+---
+
+## 1. World-Level Adjacency Rules
+
+- `coord_world_root` may be adjacent to:
+  - `coord_districts`
+  - `coord_hotel_root`
+  - `coord_tower`
+  - `coord_field`
+  - `coord_collapse`
+  - `coord_adjacency`
+  - `coord_invariants`
+
+- World-level nodes **must not** be adjacent to:
+  - rooms  
+  - hallways  
+  - floors  
+  - abstract/UI coordinates  
+
+---
+
+## 2. Hotel-Level Adjacency Rules
+
+- `coord_hotel_root` may be adjacent to:
+  - world-level nodes  
+  - lobby-level nodes  
+  - floor-level nodes  
+
+- `coord_lobby` may be adjacent to:
+  - `coord_hallway_floor_01`
+  - hotel service nodes (front desk, directory, vending, bulletin board)
+  - `coord_district_door`
+
+- Hotel-level nodes **must not** be adjacent to:
+  - rooms directly  
+  - abstract/UI nodes  
+  - world nodes other than their parent  
+
+---
+
+## 3. Floor-Level Adjacency Rules
+
+- Floors may be adjacent only to:
+  - the floor above  
+  - the floor below  
+  - vertical circulation nodes (stairs, elevators)
+
+- Floors **must not** be adjacent to:
+  - rooms  
+  - hallways  
+  - world-level nodes  
+
+---
+
+## 4. Room-Level Adjacency Rules
+
+- Rooms may be adjacent only to:
+  - hallways on the same floor  
+
+- Rooms **must not** be adjacent to:
+  - other rooms  
+  - floors  
+  - world-level nodes  
+  - abstract/UI nodes  
+
+---
+
+## 5. Circulation Adjacency Rules
+
+### Hallways
+- Hallways may be adjacent to:
+  - rooms on the same floor  
+  - other hallways on the same floor  
+  - lobby (if floor = 1)  
+
+### Stairs
+- Stairs may be adjacent to:
+  - the floor above  
+  - the floor below  
+  - hallways on the same floor  
+
+### Elevators
+- Elevators may be adjacent to:
+  - all floors they serve  
+  - hallways on those floors  
+
+---
+
+## 6. Abstract Coordinate Adjacency Rules
+
+- Abstract coordinates may be adjacent only to:
+  - other abstract coordinates  
+  - UI-space nodes (if tagged `ui`)  
+
+- Abstract nodes **must not** be adjacent to:
+  - world  
+  - hotel  
+  - floor  
+  - room  
+  - circulation  
+
+---
+
+## 7. Enforcement
+
+The Engine must reject any adjacency that violates these rules.  
+This ensures the coordinate graph remains stable, modular, and non‑drifting.
