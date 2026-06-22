@@ -1,16 +1,16 @@
 [
   {
-    "id": "route_world_root_to_tower",
+    "id": "route_world_root_to_hotel_shell",
     "source": "world_root",
-    "target": "tower",
+    "target": "hotel_shell",
     "conditions": [],
     "transitions": [],
     "profile": "standard",
     "invariants": []
   },
   {
-    "id": "route_tower_to_world_root",
-    "source": "tower",
+    "id": "route_hotel_shell_to_world_root",
+    "source": "hotel_shell",
     "target": "world_root",
     "conditions": [],
     "transitions": [],

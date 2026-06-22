@@ -1,16 +1,16 @@
 [
   {
-    "id": "route_world_root_to_tower",
+    "id": "route_world_root_to_collapse",
     "source": "world_root",
-    "target": "tower",
+    "target": "collapse",
     "conditions": [],
     "transitions": [],
     "profile": "standard",
     "invariants": []
   },
   {
-    "id": "route_tower_to_world_root",
-    "source": "tower",
+    "id": "route_collapse_to_world_root",
+    "source": "collapse",
     "target": "world_root",
     "conditions": [],
     "transitions": [],
