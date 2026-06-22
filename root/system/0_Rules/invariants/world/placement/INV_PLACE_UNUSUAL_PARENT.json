@@ -1,0 +1,13 @@
+{
+  "id": "INV_PLACE_UNUSUAL_PARENT",
+  "layer": "world.placement",
+  "severity": "soft",
+  "scope": "placement",
+  "when": {
+    "ref": "placement.unusual_parent"
+  },
+  "effect": {
+    "code": "E_PLACE_UNUSUAL_PARENT",
+    "message_key": "placement.unusual_parent"
+  }
+}

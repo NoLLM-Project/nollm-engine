@@ -1,0 +1,13 @@
+{
+  "id": "INV_ID_SKU_AMBIGUOUS",
+  "layer": "registry.identity",
+  "severity": "soft",
+  "scope": "identity",
+  "when": {
+    "ref": "identity.sku_ambiguous"
+  },
+  "effect": {
+    "code": "E_ID_SKU_AMBIGUOUS",
+    "message_key": "identity.sku_ambiguous"
+  }
+}

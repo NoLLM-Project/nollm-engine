@@ -1,0 +1,13 @@
+{
+  "id": "INV_ADJ_DEPRECATED_PATH",
+  "layer": "engine.adjacency",
+  "severity": "soft",
+  "scope": "adjacency",
+  "when": {
+    "ref": "adjacency.deprecated_path"
+  },
+  "effect": {
+    "code": "E_ADJ_DEPRECATED_PATH",
+    "message_key": "adjacency.deprecated_path"
+  }
+}

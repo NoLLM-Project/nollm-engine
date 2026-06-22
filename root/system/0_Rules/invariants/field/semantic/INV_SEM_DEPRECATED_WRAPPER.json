@@ -1,0 +1,13 @@
+{
+  "id": "INV_SEM_DEPRECATED_WRAPPER",
+  "layer": "field.semantic",
+  "severity": "soft",
+  "scope": "semantic",
+  "when": {
+    "ref": "semantic.deprecated_wrapper"
+  },
+  "effect": {
+    "code": "E_SEM_DEPRECATED_WRAPPER",
+    "message_key": "semantic.deprecated_wrapper"
+  }
+}

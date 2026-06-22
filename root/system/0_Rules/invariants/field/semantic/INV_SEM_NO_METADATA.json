@@ -1,0 +1,13 @@
+{
+  "id": "INV_SEM_NO_METADATA",
+  "layer": "field.semantic",
+  "severity": "hard",
+  "scope": "semantic",
+  "when": {
+    "ref": "semantic.no_metadata"
+  },
+  "effect": {
+    "code": "E_SEM_NO_METADATA",
+    "message_key": "semantic.no_metadata"
+  }
+}

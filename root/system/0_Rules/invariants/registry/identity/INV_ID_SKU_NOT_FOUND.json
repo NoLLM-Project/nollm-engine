@@ -1,0 +1,13 @@
+{
+  "id": "INV_ID_SKU_NOT_FOUND",
+  "layer": "registry.identity",
+  "severity": "hard",
+  "scope": "identity",
+  "when": {
+    "ref": "identity.sku_not_found"
+  },
+  "effect": {
+    "code": "E_ID_SKU_NOT_FOUND",
+    "message_key": "identity.sku_not_found"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "INV_PLACE_FORBIDDEN_PARENT",
+  "layer": "world.placement",
+  "severity": "hard",
+  "scope": "placement",
+  "when": {
+    "ref": "placement.forbidden_parent"
+  },
+  "effect": {
+    "code": "E_PLACE_FORBIDDEN_PARENT",
+    "message_key": "placement.forbidden_parent"
+  }
+}
