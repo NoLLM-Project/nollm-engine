@@ -1,0 +1,13 @@
+import { hotelIngress } from "../system/hotelIngress.js";
+
+export async function towerSend(rawText) {
+  const towerPacket = {
+    raw: rawText,
+    timestamp: Date.now(),
+    type: "user_message"
+  };
+
+  const hotelResponse = await hotelIngress(towerPacket);
+
+  return hotelResponse.output;
+}
