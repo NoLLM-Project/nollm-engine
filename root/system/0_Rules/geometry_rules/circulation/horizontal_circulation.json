@@ -1,0 +1,4 @@
+{
+  "kind": "horizontal_circulation",
+  "description": "A geometry connector running horizontally. Not a container. Semantics assigns meaning (hallway, road, walkway)."
+}

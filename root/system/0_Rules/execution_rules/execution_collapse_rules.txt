@@ -1,0 +1,199 @@
+# Execution Collapse Rules
+
+Execution collapse rules define how execution detects collapse, how collapse is contained, and what execution is forbidden to do in response.  
+Execution collapse is strictly downstream of pipeline collapse, workflow collapse, routing collapse, and all engine‑level collapse membranes.
+
+Execution collapse is structural, non‑semantic, non‑interpretive, and never a mechanism.
+
+---
+
+# 1. Collapse Definition Rules
+
+## 1.1 Execution collapse is a structural failure state
+Execution collapse occurs only when:
+- an execution operation cannot be performed structurally  
+- an execution transition is malformed  
+- a pipeline stage reference is invalid  
+- a workflow step reference is invalid (via pipeline)  
+- a routing transition reference is invalid (via pipeline)  
+- execution boundaries are violated  
+- execution tables (if present) are malformed  
+
+These are mechanical failures.
+
+## 1.2 Execution collapse is not semantic
+Execution collapse cannot be triggered by:
+- meaning  
+- identity  
+- categories  
+- content semantics  
+- interpretation  
+
+Semantic collapse is upstream and forbidden.
+
+---
+
+# 2. Collapse Detection Rules
+
+## 2.1 Execution may only detect structural collapse
+Allowed collapse triggers:
+- invalid execution operation  
+- invalid execution transition  
+- missing execution operations  
+- invalid pipeline stage references  
+- invalid workflow or routing references (via pipeline)  
+- structural boundary violations  
+
+## 2.2 Execution may not detect semantic collapse
+Forbidden collapse triggers:
+- meaning errors  
+- identity errors  
+- category errors  
+- content errors  
+
+Execution cannot interpret semantics.
+
+---
+
+# 3. Collapse Interpretation Rules
+
+## 3.1 Execution cannot interpret the cause of collapse
+Execution cannot:
+- infer intent  
+- assign semantics  
+- reinterpret names  
+- reinterpret content  
+
+Collapse is a structural fact, not a semantic signal.
+
+## 3.2 Execution cannot reinterpret structural context
+Execution cannot reinterpret:
+- pipeline transitions  
+- workflow transitions  
+- routing transitions  
+- adjacency  
+- placement  
+- geometry  
+
+Execution accepts structural context as‑is.
+
+---
+
+# 4. Collapse Mutation Rules
+
+## 4.1 Execution cannot mutate upstream domains in response to collapse
+Execution cannot change:
+- pipelines  
+- workflows  
+- routing tables  
+- routing transitions  
+- geometry  
+- adjacency  
+- placement  
+- naming  
+- categories  
+- invariants  
+
+Collapse does not grant mutation privileges.
+
+## 4.2 Execution cannot create new domains in response to collapse
+Execution cannot create:
+- new execution types  
+- new pipeline types  
+- new workflow types  
+- new routing types  
+- new adjacency types  
+- new semantics  
+
+Collapse is not generative.
+
+---
+
+# 5. Collapse Boundary Rules
+
+## 5.1 Execution collapse cannot cross domain boundaries
+Execution collapse cannot propagate into:
+- semantics  
+- registry internals  
+- naming rules  
+- geometry definitions  
+- invariant definitions  
+
+Collapse remains inside the execution domain.
+
+## 5.2 Execution collapse cannot fuse domains
+Execution collapse cannot cause:
+- execution ↔ pipeline fusion  
+- execution ↔ workflow fusion  
+- execution ↔ routing fusion  
+- execution ↔ engine fusion  
+- execution ↔ semantics fusion  
+
+Fusion is contamination.
+
+---
+
+# 6. Collapse Handling Rules
+
+## 6.1 Collapse handling must be mechanical
+Allowed responses:
+- halt execution  
+- return structural execution collapse codes  
+- abort execution operation (structural only)  
+- signal pipeline‑level structural collapse  
+
+Forbidden responses:
+- reinterpret meaning  
+- reinterpret identity  
+- reinterpret categories  
+- reinterpret content  
+
+## 6.2 Collapse handling cannot alter execution identity
+Collapse cannot:
+- reorder execution operations  
+- mutate execution structure  
+- reinterpret execution transitions  
+
+Execution identity is fixed.
+
+---
+
+# 7. Collapse State Rules
+
+## 7.1 Collapse state must be ephemeral
+Collapse state must:
+- exist only during execution  
+- be cleared after the execution operation  
+- leave no residue  
+
+## 7.2 Collapse state cannot persist across executions
+Collapse state cannot:
+- accumulate  
+- evolve  
+- adapt  
+- drift  
+
+Persistence is forbidden.
+
+---
+
+# 8. Collapse Stability Rules
+
+## 8.1 Collapse detection must be deterministic
+Given the same:
+- pipeline structure  
+- workflow structure  
+- routing tables  
+- adjacency/placement  
+- execution structure  
+
+The same execution collapse must be detected.
+
+## 8.2 Collapse behavior cannot drift
+Collapse handling cannot:
+- reinterpret itself  
+- accumulate meaning  
+- change behavior over time  
+
+Execution collapse handling is stable.
+

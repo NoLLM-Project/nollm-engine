@@ -1,0 +1,4 @@
+{
+  "kind" : "vertical_circulation",
+  "description": "A geometry connector running vertically. Not a container. Semantics assigns meaning (stairs, elevator, tower ascent)."
+}
