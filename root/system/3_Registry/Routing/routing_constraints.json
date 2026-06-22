@@ -1,0 +1,71 @@
+{
+  "spatial_constraints": {
+    "world_to_world": "allowed",
+    "world_to_hotel": "allowed",
+    "hotel_to_floor": "allowed",
+    "floor_to_floor": "allowed",
+    "room_to_hallway": "allowed",
+    "hallway_to_room": "allowed",
+    "hallway_to_hallway": "allowed",
+    "stairwell_to_floor": "allowed",
+    "elevator_to_floor": "allowed",
+
+    "skeleton_to_any": "forbidden",
+    "any_to_skeleton": "forbidden",
+    "null_target": "allowed_only_if_profile_none"
+  },
+
+  "ui_constraints": {
+    "ui_to_surface": "allowed",
+    "ui_to_ui_panel": "allowed",
+    "ui_to_ui_map_node": "allowed",
+    "ui_to_ui_edge": "allowed",
+    "ui_to_error": "allowed",
+    "ui_to_state_machine": "allowed",
+
+    "ui_to_room": "forbidden",
+    "ui_to_floor": "forbidden",
+    "ui_to_world": "forbidden"
+  },
+
+  "service_constraints": {
+    "concierge_to_behavior": "allowed",
+    "directory_to_behavior": "allowed",
+    "vending_to_behavior": "allowed",
+    "bulletin_to_behavior": "allowed",
+
+    "service_to_room": "forbidden",
+    "service_to_world": "forbidden"
+  },
+
+  "profile_constraints": {
+    "strict": {
+      "allowed_transitions": ["dispatch"],
+      "forbidden_transitions": ["navigation", "ui_select", "render"]
+    },
+    "standard": {
+      "allowed_transitions": ["navigation", "ui_select", "render", "dispatch"],
+      "forbidden_transitions": []
+    },
+    "service": {
+      "allowed_transitions": ["load_scene", "describe_structure", "apply_anchors", "offer_next_step"],
+      "forbidden_transitions": ["render"]
+    },
+    "ui": {
+      "allowed_transitions": ["render_nodes", "render_edges", "render_you_are_here", "draw_marker", "apply_colors", "apply_shapes", "apply_icons", "apply_glow"],
+      "forbidden_transitions": ["load_scene", "describe_structure"]
+    },
+    "stance": {
+      "allowed_transitions": ["apply_anchors"],
+      "forbidden_transitions": ["navigation", "render"]
+    },
+    "notepad": {
+      "allowed_transitions": ["store_text"],
+      "forbidden_transitions": ["read_text", "render"]
+    },
+    "none": {
+      "allowed_transitions": [],
+      "forbidden_transitions": ["navigation", "render", "dispatch"]
+    }
+  }
+}

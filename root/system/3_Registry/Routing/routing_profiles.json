@@ -1,0 +1,43 @@
+{
+  "strict": {
+    "description": "Routes requests to modules only.",
+    "allowed_transitions": ["dispatch"],
+    "forbidden_transitions": ["navigation", "render", "ui_select"]
+  },
+
+  "standard": {
+    "description": "Default routing profile for spatial and UI navigation.",
+    "allowed_transitions": ["navigation", "ui_select", "render", "dispatch"],
+    "forbidden_transitions": []
+  },
+
+  "service": {
+    "description": "Routing for concierge and service behaviors.",
+    "allowed_transitions": ["load_scene", "describe_structure", "apply_anchors", "offer_next_step"],
+    "forbidden_transitions": ["render"]
+  },
+
+  "ui": {
+    "description": "Routing for UI rendering and interaction.",
+    "allowed_transitions": ["render_nodes", "render_edges", "render_you_are_here", "draw_marker", "apply_colors", "apply_shapes", "apply_icons", "apply_glow"],
+    "forbidden_transitions": ["load_scene", "describe_structure"]
+  },
+
+  "stance": {
+    "description": "Routing for stance anchor application.",
+    "allowed_transitions": ["apply_anchors"],
+    "forbidden_transitions": ["navigation", "render"]
+  },
+
+  "notepad": {
+    "description": "Routing for user-authored continuity notes.",
+    "allowed_transitions": ["store_text"],
+    "forbidden_transitions": ["read_text", "render"]
+  },
+
+  "none": {
+    "description": "Non-navigable objects (e.g., skeletons).",
+    "allowed_transitions": [],
+    "forbidden_transitions": ["navigation", "render", "dispatch"]
+  }
+}
