@@ -1,0 +1,22 @@
+{
+  "identity.sku_not_found": {
+    "soft": {
+      "short": "I couldn’t find a matching SKU, but you may continue.",
+      "long": "I attempted to resolve a SKU from the metadata, but none matched. You may continue, though the result may be incomplete."
+    },
+    "hard": {
+      "short": "I couldn’t find a matching SKU.",
+      "long": "I attempted to resolve a SKU from the metadata, but none matched. Without a valid SKU, I cannot continue."
+    }
+  },
+  "identity.sku_ambiguous": {
+    "soft": {
+      "short": "Multiple SKUs match this metadata.",
+      "long": "The metadata you provided matches more than one SKU. I can continue, but the result may be ambiguous unless the SKU is clarified."
+    },
+    "hard": {
+      "short": "Multiple SKUs match this metadata.",
+      "long": "The metadata you provided matches more than one SKU, and I cannot continue without a clear identity."
+    }
+  }
+}

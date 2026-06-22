@@ -1,0 +1,22 @@
+{
+  "adjacency.not_adjacent": {
+    "soft": {
+      "short": "The movement is unusual but allowed.",
+      "long": "The movement you requested is allowed, but the coordinates are not typically adjacent."
+    },
+    "hard": {
+      "short": "Movement is not allowed.",
+      "long": "The target coordinate is not adjacent to the current one, so movement cannot continue."
+    }
+  },
+  "adjacency.deprecated_path": {
+    "soft": {
+      "short": "This movement uses a deprecated path.",
+      "long": "The movement you requested is allowed, but it uses a path marked as deprecated. You may continue, though this route is no longer recommended."
+    },
+    "hard": {
+      "short": "This movement uses a deprecated path.",
+      "long": "The movement you requested uses a path marked as deprecated, and I cannot continue without a valid route."
+    }
+  }
+}

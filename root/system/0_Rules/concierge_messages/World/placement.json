@@ -1,0 +1,22 @@
+{
+  "placement.forbidden_parent": {
+    "soft": {
+      "short": "The object is in an unusual parent, but you may continue.",
+      "long": "The object appears to be placed inside a parent that is not typically used. You may continue, but the placement may not behave as expected."
+    },
+    "hard": {
+      "short": "The object cannot be placed here.",
+      "long": "The object is placed inside a parent that is not allowed. I cannot continue with this placement."
+    }
+  },
+  "placement.unusual_parent": {
+    "soft": {
+      "short": "This object is in an unusual parent.",
+      "long": "The object is placed inside a parent that is not typically used. You may continue, but the placement may behave differently than expected."
+    },
+    "hard": {
+      "short": "This object is in an unusual parent.",
+      "long": "The object is placed inside a parent that is not typically used, and I cannot continue without a valid placement."
+    }
+  }
+}

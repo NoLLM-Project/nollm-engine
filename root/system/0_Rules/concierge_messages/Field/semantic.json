@@ -1,0 +1,22 @@
+{
+  "semantic.no_metadata": {
+    "soft": {
+      "short": "The wrapper has no metadata, but you may continue.",
+      "long": "The wrapper you provided does not map to any known metadata. The request can continue, but the result may be incomplete."
+    },
+    "hard": {
+      "short": "The wrapper has no metadata.",
+      "long": "The wrapper you provided does not map to any known metadata, so I cannot continue with this request."
+    }
+  },
+  "semantic.deprecated_wrapper": {
+    "soft": {
+      "short": "This wrapper is deprecated, but you may continue.",
+      "long": "The wrapper you provided is recognized but marked as deprecated. You may continue, though the result may rely on older or less-preferred       metadata."
+    },
+    "hard": {
+      "short": "This wrapper is deprecated.",
+      "long": "The wrapper you provided is marked as deprecated and cannot be used for this request."
+    }
+  }
+}
