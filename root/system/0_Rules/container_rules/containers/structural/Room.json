@@ -1,0 +1,5 @@
+{
+  "kind": "Room",
+  "category": "Structural",
+  "description": "Smallest structural container. Lives inside floors."
+}
