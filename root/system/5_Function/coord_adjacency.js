@@ -1,6 +1,6 @@
 // system/5_Function/coord_adjacency.js
 
-import { loadJson } from "../../utils/load_json.js";
+import { loadJson } from "../../utils/loadJson.js";
 
 export async function coord_adjacency({ xyz, workflowContext }) {
 
