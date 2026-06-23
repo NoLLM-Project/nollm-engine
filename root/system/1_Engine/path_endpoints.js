@@ -3,16 +3,16 @@
 export function deriveEndpoints(metadata, structural) {
   const { coordinates, type, category } = metadata || {};
 
-  // Example: start at lobby for hotel-type objects
-  let startNode = "coord_lobby";
+  // START NODE: routing node name (no coord_ prefix)
+  let startNode = "hotel_lobby";   // or whatever your routing graph uses
 
-  // Example: choose end based on category or coordinates
+  // END NODE: routing node name (no coord_ prefix)
   let endNode = null;
 
   if (category === "hotel_front_desk") {
-    endNode = "coord_front_desk";
+    endNode = "hotel_front_desk";
   } else if (category === "service_room") {
-    endNode = "coord_service_room";
+    endNode = "service_room";
   } else {
     // fallback: use coordinates mapping if you have one
     endNode = mapCoordinatesToNode(coordinates);
